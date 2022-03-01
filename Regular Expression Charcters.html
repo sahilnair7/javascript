@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Regular Expression Charcters</title>
+</head>
+<body>
+<script>
+
+         let regex = /india/;    // this is use for liiteral
+         regex =/^india/;           // ^ caret match if string start with
+
+         let str = "india we live  india and india is  sone ki country"
+
+          let result= regex.exec(str);
+          console.log("The Result Is", result);
+
+          if(regex.test(str))
+          {
+              console.log("The Result Matches");
+          }
+          else
+
+          {
+              console.log("The Result Does Not Match");
+
+          }
+
+
+</script>
+</body>
+</html>

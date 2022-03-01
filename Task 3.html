@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 3</title>
+</head>
+<body>
+<script>
+var a=prompt("Enter The Name Of Student");
+var r=parseInt(prompt("Enter The Roll No. Of Student"));
+var m=parseInt(prompt("Enter The Marks Scored In Maths"));
+var s=parseInt(prompt("Enter The Marks Scored In Science"));
+var e=parseInt(prompt("Enter The Marks Scored In English"));
+var h=parseInt(prompt("Enter The Marks Scored In Hindi"));
+var c=parseInt(prompt("Enter The Marks Scored In Computer"));
+
+document.write("Name Of Student is "+a+"<br>");
+document.write("Roll No. Of Student is "+r+"<br>");
+document.write("Marks Scored In Maths = "+m+"<br>");
+document.write("Marks Scored In Science = "+s+"<br>");
+document.write("Marks Scored In English = "+e+"<br>");
+document.write("Marks Scored In Hindi = "+h+"<br>");
+document.write("Marks Scored In Computer = "+c+"<br>");
+
+var t=(m+s+e+h+c);
+
+var per=(t/500)*100;
+document.write("Total Marks Percentage = "+per+"<br>");
+
+if(per>90)
+{
+  document.write("Grade Is A+");
+}
+else if(per>=80)
+{
+  document.write("Grade Is A");
+}
+else if(per>=70)
+{
+  document.write("Grade Is B");
+}
+else if(per>=60)
+{
+  document.write("Grade Is C");
+}
+else if(per>=50)
+{
+  document.write("Grade Is D");
+}
+else if(per>=40)
+{
+  document.write("Grade Is E");
+}
+else
+{
+  document.write("Fail");
+}
+
+</script>
+</body>
+</html>
+

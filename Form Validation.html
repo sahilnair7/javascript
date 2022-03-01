@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation</title>
+<script>
+        function val() 
+           {
+             if (document.f1.user.value == '') 
+           {
+                alert("Please Enter Your First Name");
+                document.f1.user.focus();
+                return false;
+           }
+
+            else if (document.f1.lastname.value == '') 
+           {
+                alert("Please Enter Your Last Name");
+                document.f1.lastname.focus();
+                return false;
+            }
+
+            else if (document.f1.phone.value == '') 
+           {
+                alert("Please Enter Your Phone Number");
+                document.f1.phone.focus();
+                return false;
+           }
+            else if (document.f1.email.value == '') 
+            {
+                alert("Please Enter Your Email ID");
+                document.f1.email.focus();
+                return false;
+            }
+            return true;
+
+        }
+
+</script>
+</head>
+<body>
+    <form action="" method="post" name="f1" onsubmit=" return val()">
+    
+        <input type="text" name="user" placeholder="Enter  Your  First Name"><br>
+        <input type="text" name="lastname" placeholder="Enter  Your  Last Name"><br>
+        <input type="num" name="phone" placeholder="Mobile Number"><br>
+        <input type="email" name="email" placeholder="Email ID"><br>
+        <input type="submit" name="submit" value="Submit">
+
+</form>
+</body>
+</html>

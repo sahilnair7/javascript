@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title>Array Numeric Sort Descending Order</title>
+<p><b>Array Numeric Sort Descending Order</p></b>
+<p>Sort The Array In Descending Order:</p>
+<p id="array1"></p>
+<p id="array2"></p>
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("array1").innerHTML = points;
+points.sort(function(a, b){return b - a});
+document.getElementById("array2").innerHTML = points;
+</script>
+</body>
+</html>

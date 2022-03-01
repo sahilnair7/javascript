@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 2</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        var a=prompt("Enter the name of employe")
+        var bs=parseInt(prompt("Enter the employe basic salary"));
+        var hraper=parseInt(prompt("Enter HRA Percentage"));
+        var daper=parseInt(prompt("Enter DA Percentage "));
+        var taper=parseInt(prompt("Enter TA Percentage "));
+        var hra,da,ta,gs;
+        hra=bs*(hraper/100);
+        da=bs*(daper/100);
+        ta=bs*(taper/100);
+        gs=bs+hra+da +ta;
+        document.write( "The HRA of "+a+" is Rs" +hra+"/-<br>");
+        document.write("The DA of "+a+" is RS"+da+"/-<br>");
+        document.write("The gross salary of "+a+" is Rs"+gs+"/-<br>");
+        var pfper=parseInt(prompt("Enter PF Percentage "));
+        var incper=parseInt(prompt("Enter Percentage of Income Tex"));
+        pf=bs*(pfper/100);
+        inc=bs*(incper/100);
+        var ac=gs-pf-inc;
+         document.write("The actual or inhand salary of "+a+" is Rs"+ac+"/-");
+</script>
+</body>
+</html>

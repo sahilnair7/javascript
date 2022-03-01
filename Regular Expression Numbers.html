@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title>Regular Expression Numbers</title>
+<p><b>Regular Expression Numbers</p></b>
+<p>A Global Search For Numbers That Are NOT From 1 To 4:</p>
+<script>
+let text = "123456789";
+let pattern = /[^1-4]/g;
+let result = text.match(pattern);
+document.write(result);
+</script>
+</body>
+</html>

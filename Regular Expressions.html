@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Regular Expressions</title>
+</head>
+<body>
+<script>
+             let reg =/hello/g;                    //Global Property
+            //  reg =/hello/i;                     //Insensitive
+
+
+            console.log(reg.source);
+            let s ="this is the Hello  and hello once agian";
+
+                                //Excate Method
+
+
+                                // let result1 = reg.exec(s);
+                                // console.log(result1); 
+
+
+                                //Test Method 
+
+                                // let result2 = reg.test(s);
+                                // console.log(result2); 
+
+
+                                //Match Method
+
+                                let result3 = s.match(reg);
+                                console.log(result3); 
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title>Compare Date</title>
+<p id="demo"></p>
+<script>
+let text;
+const today = new Date();
+const someday = new Date();
+someday.setFullYear(2100, 0, 14);
+if (someday > today)
+{
+  text = "Today Is Before January 26, 2100.";
+}
+else
+{
+  text = "Today Is After January 26, 2100.";
+}
+document.write(text);
+</script>
+</body>
+</html>

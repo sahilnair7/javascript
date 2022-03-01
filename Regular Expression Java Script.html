@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> regular expression meta character symbol</title>
+</head>
+<body>
+<script>
+console.log("this java script regular expression");
+  let regex=/country/;
+//lets look some  meta character symbol
+   // regex=/^india/;   //^ caret  match if string  start with
+  
+   // regex=/country$/;      // $ match end of string 
+
+   
+    // regex=/i.n/g;   // . match any  one charcter
+    // regex=/indian*/g;   // * match 0 or more charcter
+  //regex=/i?ndia?/;   // ? after charcter is optional 
+   
+   // regex=/i\*ndia/;   // ? after charcter is optional 
+
+let str="iondian we live in indian  and indian is big country ";
+
+
+
+
+let result= str.match(regex);
+console.log("the result  from exec is",result);
+if(regex.test(str))
+{
+	console.log("the result is matches");
+} else
+	{
+    console.log("the match is not matches");
+	}
+
+
+</script>
+</body>
+</html>

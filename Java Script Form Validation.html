@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Java Script Form Validation</title>
+	<style>
+		    body
+		    {
+
+		    	   padding: 10px 50px;
+		    }
+
+		    .formdesign
+		    {
+ 
+                   font-size: 20px;
+
+            }
+
+            .googleformdesign input
+            {
+
+            	   width: 50%;
+            	   padding: 12px 20px;
+            	   border: 1px solid black;
+            	   margin: 14px;
+            	   border-radius: 4px;
+            	   font-size: 15px;
+            }
+
+            .formerror
+            {
+            	   color: red;
+            }
+
+            .button
+            {
+            	   border-radius: 10px;
+            	   width: 100px;
+            	   height: 50px;
+            	   font-size: 25px;
+            	   margin: 22px 20px;
+            }
+	</style>
+</head>
+<body>
+	   <h1>Google Form</h1>
+	   <form action="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
+	   	      <div class="googleformdesign" id="name">
+	   	      Name: <input type="text" name="fname" required><b><span class="formerror"></span></b>
+	   	      </div>
+
+	   	      <div class="googleformdesign" id="email">
+	   	      Email ID: <input type="email" name="femail" required><b><span class="formerror"></span></b>
+	   	      </div>
+
+	   	      <div class="googleformdesign" id="phone">
+	   	      Phone No.: <input type="phone" name="fphone" required><b><span class="formerror"></span></b>
+	   	      </div>
+
+	   	      <div class="googleformdesign" id="pass">
+	   	      Password: <input type="password" name="fpass" required><b><span class="formerror"></span></b>
+	   	      </div>
+
+	   	      <div class="googleformdesign" id="cpass">
+	   	      Confirm Password: <input type="password" name="fcpass" required><b><span class="formerror"></span></b>
+	   	      </div>
+
+	   	      <input class="button" type="submit" value="Submit">
+	   	      
+	   	
+
+
+	   </form>
+</body>
+<script>
+	     function seterror(id, error)
+	     {
+            element= document.getElementsById(id);
+            element.getElementsByClassName('formerror')[0].innerHTML = error;
+
+          }
+
+
+	     	functionvalidateForm()
+	        {
+
+                var returnval = true;
+                var name = document.forms['myForm']["fname"].value;
+                if (name.length<5)
+                {
+
+                	seterror("name", "*Length Of Name Is Too Short")
+                	returnval = false;
+                }
+
+                if (name.length == 0)
+                {
+
+                	seterror("name", "*Length Of Name Cannot Be Zero")
+                	returnval = false;
+                }
+
+                var email = document.forms['myForm']["femail"].value;
+                if (email.length>15)
+                {
+
+                	seterror("email", "*Length Of Email Is Too Short")
+                	returnval = false;
+                }
+                  
+
+
+                      
+	        }
+	     
+</script>
+</html>

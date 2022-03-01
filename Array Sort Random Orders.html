@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title>Array Sort Random Orders</title>
+<p><b>Array Sort Random Orders</p></b>
+<p>Click The Button Again And Again To Sort The Array In Random Order.</p>
+<button onclick="myFunction()">Try It Now</button>
+<p id="array"></p>
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("array").innerHTML = points;
+function myFunction()
+{
+  points.sort(function(a,b){return 0.5 - Math.random()});
+  document.getElementById("array").innerHTML = points;
+}
+</script>
+</body>
+</html>

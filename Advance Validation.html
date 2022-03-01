@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Advance Validation</title>
+<script>
+function fun_validate()
+{
+var letters = /^[A-Za-z]+$/;
+
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+var p1=document.f.pass.value;
+
+
+var p2=document.f.pass2.value;
+
+
+if(document.f.f_name.value == "")
+	{
+		alert("please enter first name");
+		document.f.f_name.focus();
+		return false;
+	}
+else if(!(document.f.f_name.value.match(letters)))
+
+/*The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.*/
+	
+	{
+		alert("First name must have alphabet characters only");
+		document.f.f_name.focus();
+		return false;
+	}
+else if(document.f.l_name.value == "")
+	{
+		alert("please enter last name");
+		document.f.l_name.focus();
+		return false;
+	}
+else if(!(document.f.l_name.value.match(letters)))
+	{
+		alert("Last name must have alphabet characters only");
+		document.f.l_name.focus();
+		return false;
+	}
+                  
+else if(!(document.f.gender[0].checked) && !(document.f.gender[1].checked))
+	{
+		alert("Please select gender");
+		return false;
+	}
+else if(document.f.add.value == "")
+	{
+		alert("please enter address");
+		document.f.add.focus();
+		return false;
+	}
+else if(document.f.u_name.value == "")
+	{
+		alert("please enter username");
+		document.f.u_name.focus();
+		return false;
+	}
+else if(document.f.pass.value == "")
+	{
+		alert("please enter password");
+		document.f.pass.focus();
+		return false;
+	}
+else if(document.f.pass2.value == "")
+	{
+		alert("please enter confirm password");
+		document.f.pass2.focus;
+		return false;
+	}
+else if(p1 != p2)
+	{
+		alert("The two passwords do not match");
+		return false;
+	}
+else if(document.f.mob.value == "")
+	{
+		alert("please enter mobile no");
+		document.f.mob.focus();
+		return false;
+	}
+else if(isNaN(document.f.mob.value)||document.f.mob.value.indexOf(" ")!=-1)
+
+/*The isNaN() function determines whether a value is an illegal number (Not-a-Number).
+The indexOf() method returns the position of the first occurrence of a specified value in a string.It is case sensitive.
+This method returns -1 if the value to search for never occurs.*/
+
+			{
+              alert("mobile number must be numeric")
+              return false; 
+			}
+else if ((document.f.mob.value.length < 10) || (document.f.mob.value.length > 10))
+			{
+                alert("mobile number must be of 10 digits");
+                return false;
+			}
+else if ((document.f.mob.value.charAt(0)!="9") && (document.f.mob.value.charAt(0)!="8") && (document.f.mob.value.charAt(0)!="7"))
+           
+/*The charAt() method returns the character at the specified index in a string.
+The index of the first character is 0, the second character is 1, and so on.*/
+		   
+		   {
+                alert("mobile number must start with 9 or 8 or 7");
+                return false
+           } 
+else if(document.f.email.value == "")
+	{
+		alert("please enter email id");
+		document.f.email.focus();
+		return false;
+	}
+else if(!(document.f.email.value.match(mailformat)))  
+	{  
+		alert("You have entered an invalid email address!");  
+		document.f.email.focus();  
+		return false; 
+	}  
+else if(document.f.sec_que.value == "0")
+	{
+		alert("please select security question");
+		document.f.sec_que.focus();
+		return false;
+	}
+else if(document.f.sec_ans.value == "")
+	{
+		alert("please enter answer of security question");
+		document.f.sec_ans.focus();
+		return false;
+	}
+else if(document.f.alt_email.value == "")
+	{
+		alert("please enter alternate email id");
+		document.f.alt_email.focus();
+		return false;
+	}
+else if(!(document.f.alt_email.value.match(mailformat)))  
+	{  
+		alert("You have entered an invalid alternate email id!");  
+		document.f.alt_email.focus();  
+		return false; 
+	}
+else if(document.f.email.value == document.f.alt_email.value)
+	{
+		alert("Email ID and Alternate Email ID Should be different.");
+		document.f.email.focus();
+		return false;
+	}
+	return true
+}
+
+</script>
+</head>
+
+<body>
+<table width="100%">
+  <tr>
+    <td></td>
+  </tr>
+  <tr>
+    <td><table width="35%" border="1" align="center">
+      <form name="f" method="post" enctype="multipart/form-data" onsubmit="return fun_validate();">
+        <tr>
+          <td colspan="3"><div align="center">Registration Form</div></td>
+        </tr>
+		<tr>
+		  <td style="color:red;">&nbsp;</td>
+		  <td>&nbsp;</td>
+		  <td><?php echo  $msg;?></td>
+		  </tr>
+		<tr>
+		  <td style="color:red;">*</td>
+          <td>First Name </td>
+          <td><label>
+            <input name="f_name" type="text" id="f_name" />
+          </label></td>
+        </tr>
+		<tr>
+		  <td style="color:red;">*</td>
+          <td>Last Name </td>
+          <td><label>
+            <input name="l_name" type="text" id="l_name" />
+          </label></td>
+        </tr>
+		<tr>
+		  <td style="color:red;">*</td>
+          <td>Gender </td>
+          <td><label>
+          <input name="gender" type="radio" value="Male" />
+          Male
+          <input name="gender" type="radio" value="Female" />
+          Female</label></td>
+        </tr>
+		<tr>
+		  <td style="color:red;">*</td>
+          <td>Address </td>
+          <td><label>
+          <textarea name="add" id="add"></textarea>
+          </label></td>
+        </tr>
+        <tr>
+		  <td style="color:red;">*</td>
+          <td>User Name </td>
+          <td><label>
+          <input name="u_name" type="text" id="u_name" />
+          </label></td>
+        </tr>
+        <tr>
+		  <td style="color:red;">*</td>
+          <td>Password</td>
+          <td><input name="pass" type="password" id="pass" /></td>
+        </tr>
+        <tr>
+		  <td style="color:red;">*</td>
+          <td>Confirm Password </td>
+          <td><input name="pass2" type="password" id="pass2" /></td>
+        </tr>
+        <tr>
+          <td style="color:red;">*</td>
+		  <td>Mobile No. </td>
+          <td><input name="mob" type="text" id="mob" /></td>
+        </tr>
+        <tr>
+          <td style="color:red;">*</td>
+		  <td>Email ID </td>
+          <td><input name="email" type="text" id="email" /></td>
+        </tr>
+        <tr>
+          <td style="color:red;">*</td>
+		  <td>Security Question </td>
+          <td><label>
+          <select name="sec_que" id="sec_que">
+            <option value="0">Select a Question</option>
+            <option>Favourite Food</option>
+            <option>Favourite Actor</option>
+            <option>favourite Movie</option>
+            <option>First Pet Name</option>
+            <option>Place Where You Born</option>
+          </select>
+          </label></td>
+        </tr>
+        <tr>
+          <td style="color:red;">*</td>
+		  <td>Your Answer </td>
+          <td><input name="sec_ans" type="text" id="sec_ans" /></td>
+        </tr>
+        <tr>
+          <td style="color:red;">*</td>
+		  <td>Alternate Email ID </td>
+          <td><input name="alt_email" type="text" id="alt_email" /></td>
+        </tr>
+        <tr>
+          <td colspan="3"><div align="center">
+              <label>
+              <input type="submit" name="submit" value="submit" />
+			  <input type="reset" name="reset" />
+              </label>
+              <label></label>
+              <label></label>
+          </div></td>
+        </tr>
+ </form>
+    </table></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+</table>
+</body>
+</html>

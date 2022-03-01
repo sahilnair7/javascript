@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multidimensional Array</title>
+<meta charset="utf-8">
+</head>
+<body>
+
+<script type="text/javascript">
+	
+var ary=[
+
+["Sahil",24,"Male","BTECH"],
+["Himanshu",23,"Male","BCA"],
+["Taran",23,"Male","BCOM"],
+["Rishabh",23,"Male","BA"]
+
+];
+
+// document.write(ary);
+
+//  document.write(ary[0][0]);
+//  document.write(ary[3][0]);
+//  document.write(ary[2][3]);
+
+ // document.write("<table border='1px' width='50%'  bgcolor='green'  cellspacing='0'>")
+ // for(a=0;a<4;a++){
+ // 	document.write("<tr>")
+ // 	for(b=0;b<4;b++){
+ // 		document.write("<td>" + ary[a][b] + "</td> ");
+ // 	}
+ // 	document.write("<br>");
+ // 	document.write("</tr>")
+ // }
+ // document.write("</table>")
+
+
+ 
+ for(a=0;a<4;a++){
+ 	document.write("<ul>")
+ 	for(b=0;b<4;b++){
+ 		document.write("<li>" + ary[a][b] + "</li> ");
+ 	}
+ 	document.write("<br>");
+ 	document.write("</ul>")
+ }
+
+</script>
+</body>
+</html>

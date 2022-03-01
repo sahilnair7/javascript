@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+              <title>Form</title>
+              <script type="text/javascript">
+             function val()
+             {
+                 if(document.f1.user.value=='')
+             {
+                 alert("Please Enter Your First Name");
+                 document.f1.user.focus();
+                  return false
+             }
+                 if(document.f1.user1.value=='')
+             {
+                 alert("Please Enter Your Last Name");
+                 document.f1.user1.focus();
+                  return false
+             }
+                 if(document.f1.pss.value=='')
+             {
+                 alert("Please Enter Your Email ID");
+                 document.f1.pss.focus();
+                  return false
+             }
+                 if(document.f1.pss1.value=='')
+             {
+                 alert("Please Enter Your Password");
+                 document.f1.pss1.focus();
+                 return false
+             }
+                 return true
+}    
+</script>
+</head>
+<body>
+<form method="post" name="f1" onsubmit="val();">
+<table border="1px" cellspacing="0">
+<tr>
+<td><label>First Name</label>
+<input type="text" name="user">
+</td>
+<td><label>Last Name</label>
+<input type="text" name="user1">
+</td>
+
+</tr>
+
+<tr>
+<td><label>Email ID</label>
+<input type="Email" name="pss">
+</td>
+
+<td><label>Password</label>
+<input type="Password" name="pss1">
+</td>
+</tr>
+
+<tr>
+<td>
+<input type="submit" name="submit" value="Submit">
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+                
+               

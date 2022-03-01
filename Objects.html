@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title>Objects</title>
+<h2>Objects</h2>
+<p>Creating Objects:</p>
+<script>
+var a= 
+{
+  firstname : "Sahil",
+  lastname  : "Nair",
+  age     : 24,
+  skills  : ["HTML","CSS", "Bootstrap","Java Script"],
+
+   fullname:function()
+{
+   return this.firstname + " " + this.lastname;
+}
+
+ 
+}
+
+document.write(a.fullname());
+//console.log(a);
+//document.write(a.skills[2]);
+</script>
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title>For Each Loops</title>
+<h1>For Each Loop</h1>
+<p id="demo"></p>
+<script>
+const numbers = [4, 8, 12, 16, 20];
+let txt = "";
+numbers.forEach(myFunction);
+document.write(txt);
+function myFunction(value, index, array)
+{
+  txt += value + "<br>";
+}
+</script>
+</body>
+</html>

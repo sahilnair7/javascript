@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title>Array Sort Alphabetically Numerically</title>
+<p><b>Array Sort Alphabetically Numerically</p></b>
+<p>Click The Buttons To Sort The Array Alphabetically And Numerically.</p>
+<button onclick="myFunction1()">Sort Alphabetically</button>
+<button onclick="myFunction2()">Sort Numerically</button>
+<p id="array"></p>
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("array").innerHTML = points;  
+function myFunction1() {
+  points.sort();
+  document.getElementById("array").innerHTML = points;
+}
+function myFunction2() {
+  points.sort(function(a, b){return a - b});
+  document.getElementById("array").innerHTML = points;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title>Regular Expression Quantifier</title>
+<p><b>Regular Expression Quantifier</p></b>
+<p>A global search for a "1", followed by zero or one "0" characters:</p>
+<script>
+let text = "1, 100 or 1000?";
+let pattern = /10?/g;
+let result = text.match(pattern);
+document.write(result);
+</script>
+</body>
+</html>
